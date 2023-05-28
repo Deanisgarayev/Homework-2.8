@@ -35,7 +35,7 @@ public class EmployeeInterfaceImpl implements EmployeeInterface {
     @Override
     public EmployeeBook find(String firstname, String surname) {
         EmployeeBook employeeBook = new EmployeeBook(firstname, surname);
-        if (employeeBooks.containsKey(employeeBook)) {
+        if (employeeBooks.containsKey(employeeBook.getFullName())) {
             return employeeBooks.get(employeeBook.getFullName());
         }
         throw new EmployeeNotFoundException();

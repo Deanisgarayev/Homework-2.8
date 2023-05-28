@@ -29,7 +29,7 @@ public class EmployeeController {
     public EmployeeBook findEmployee(@RequestParam String firstname, @RequestParam String surname) {
         return employeeInterface.find(firstname, surname);
     }
-    @GetMapping
+    @GetMapping("/findAll")
     public Collection<EmployeeBook> findAll() {
         return employeeInterface.findAll();
     }
