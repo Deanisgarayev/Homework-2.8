@@ -12,33 +12,42 @@ public class EmployeeInterfaceImpl implements EmployeeInterface {
         this.employeeBooks = new HashMap<>();
     }
 
-    @Override
 
-    public EmployeeBook add(String firstname, String surname) {
-        EmployeeBook employeeBook = new EmployeeBook(firstname, surname);
-        if (employeeBooks.containsKey(employeeBook.getFullName())) {
-            throw new EmployeeAlreadyAddedException();
+     @Override
+    public  findEmployeeWithMinSalary(Employee[] employees) {
+        int minSalary = Integer.MAX_VALUE;
+        Employee resultedEmployee = null;
+        for (Employee employee : employees) {
+            if (employee.getSalary() < minSalary) {
+                minSalary = employee.getSalary();
+                resultedEmployee = employee;
+            }
         }
-        employeeBooks.put(employeeBook.getFullName(), employeeBook);
-        return employeeBook;
+        System.out.println(resultedEmployee);
     }
-
-    @Override
-    public EmployeeBook remove(String firstname, String surname) {
-        EmployeeBook employeeBook = new EmployeeBook(firstname, surname);
-        if (employeeBooks.containsKey(employeeBook.getFullName())) {
-            return employeeBooks.remove(employeeBook.getFullName());
+ @Override
+    public findEmployeeWithMaxSalary(Employee[] employees) {
+        int maxSalary = Integer.MIN_VALUE;
+        Employee resultedEmployee = null;
+        for (Employee employee : employees) {
+            if (employee.getSalary() > maxSalary) {
+                maxSalary = employee.getSalary();
+                resultedEmployee = employee;
+            }
         }
-        throw new EmployeeNotFoundException();
+        System.out.println(resultedEmployee);
     }
+@Override
+    public backAllEmployeeByDepartment(Employee[] employees) {
+        int middleSum = 0;
+        int sum = 0;
+        int day = 30;
+        for (Employee employee : employees) {
+            sum += employee.getSalary();
+            middleSum = sum / day;
 
-    @Override
-    public EmployeeBook find(String firstname, String surname) {
-        EmployeeBook employeeBook = new EmployeeBook(firstname, surname);
-        if (employeeBooks.containsKey(employeeBook.getFullName())) {
-            return employeeBooks.get(employeeBook.getFullName());
         }
-        throw new EmployeeNotFoundException();
+        System.out.println("Сумма трат на зарплаты составила =  " + middleSum);
     }
 
     @Override
