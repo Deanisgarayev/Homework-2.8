@@ -3,56 +3,53 @@ package com.skypro.homework28;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 @Service
 public class EmployeeInterfaceImpl implements EmployeeInterface {
-    private final Map<String, EmployeeBook> employeeBooks;
 
-    public EmployeeInterfaceImpl() {
-        this.employeeBooks = new HashMap<>();
+
+    List<EmployeeBook> employees = new ArrayList<>(List.of(
+            new EmployeeBook("Иван", "Иванов", 90000, 1),
+            new EmployeeBook("Жан", "Ренно", 80000, 2),
+            new EmployeeBook("Люк", "Бессон", 85000, 3),
+            new EmployeeBook("Жерар", "Депардье", 75000, 4),
+            new EmployeeBook("Джейсон", "Стетхем", 95000, 5)
+    ));
+
+    @Override
+    public EmployeeBook findEmployeeWithMinSalary( String firstname, String surname, Integer salary, Integer departmentID) {
+       return employees getAll()
+                .stream()
+                .filter(employee -> Objects.equals(employee.getDepartmentID(), departmentID))
+                .max(Comparator.comparingInt(EmployeeBook::getSalary))
+                .orElseThrow(() -> new IllegalArgumentException("there's not employee in the department"));
     }
 
 
-     @Override
-    public  findEmployeeWithMinSalary(Employee[] employees) {
-        int minSalary = Integer.MAX_VALUE;
-        Employee resultedEmployee = null;
-        for (Employee employee : employees) {
-            if (employee.getSalary() < minSalary) {
-                minSalary = employee.getSalary();
-                resultedEmployee = employee;
-            }
-        }
-        System.out.println(resultedEmployee);
-    }
- @Override
-    public findEmployeeWithMaxSalary(Employee[] employees) {
-        int maxSalary = Integer.MIN_VALUE;
-        Employee resultedEmployee = null;
-        for (Employee employee : employees) {
-            if (employee.getSalary() > maxSalary) {
-                maxSalary = employee.getSalary();
-                resultedEmployee = employee;
-            }
-        }
-        System.out.println(resultedEmployee);
-    }
-@Override
-    public backAllEmployeeByDepartment(Employee[] employees) {
-        int middleSum = 0;
-        int sum = 0;
-        int day = 30;
-        for (Employee employee : employees) {
-            sum += employee.getSalary();
-            middleSum = sum / day;
-
-        }
-        System.out.println("Сумма трат на зарплаты составила =  " + middleSum);
+    @Override
+    public EmployeeBook findEmployeeWithMaxSalary( Integer departmentID) {
+        return employees.getAll()
+                .stream()
+                .filter(employee -> Objects.equals(employee.getDepartmentID(),departmentID))
+                .min(Comparator.comparingInt(EmployeeBook :: getSalary))
+                .orElseThrow(() -> new IllegalArgumentException("there's not employee in the department"));
     }
 
     @Override
-    public Collection<EmployeeBook> findAll() {
-        return Collections.unmodifiableCollection(employeeBooks.values());
+    public EmployeeBook findAllEmployeesByDepartment ( Integer departmentID) {
+        return employees.getAll()
+                .stream()
+                .filter(employee -> Objects.equals(employee.getDepartmentID(), departmentID))
+                .collect(Collectors.toList());
     }
 
+    @Override
+    public  Map<Integer, List<EmployeeBook>> findAll() {
+        return employees.getAll()
+                .stream()
+                .filter(employee -> Objects.equals(employee.getDepartmentID(),departmentID))
+                .collect(Collectors.groupingBy(e->e.getDepartmentID()));
+    }
 }
+

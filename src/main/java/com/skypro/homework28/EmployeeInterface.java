@@ -1,14 +1,16 @@
 package com.skypro.homework28;
 
 import java.util.Collection;
+import java.util.List;
+import java.util.Map;
 
 public interface EmployeeInterface {
 
-        EmployeeBook findEmployeeWithMinSalary (String firstname, String surname, int salary, int department);
+        EmployeeBook findEmployeeWithMinSalary (  int departmentID);
 
-        EmployeeBook findEmployeeWithMaxSalary (String firstname, String surname, int salary, int department);
-        EmployeeBook backAllEmployeeByDepartment (String firstname, String surname, int salary, int department);
+        EmployeeBook findEmployeeWithMaxSalary (int departmentID);
+        Collection<EmployeeBook>  findAllEmployeesByDepartment ( int departmentID);
 
-        Collection<EmployeeBook> findAll();
+        Map<Integer, List<EmployeeBook>> findAll();
 
 }

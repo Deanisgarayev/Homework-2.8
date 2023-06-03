@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Collection;
+import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/employee")
@@ -17,20 +19,21 @@ public class EmployeeController {
         this.employeeInterface = employeeInterface;
     }
 
-    @GetMapping("/add")
-    public EmployeeBook addEmployee(@RequestParam String firstname, @RequestParam String surname) {
-        return employeeInterface.add(firstname, surname);
+    @GetMapping("/max-salary")
+    public EmployeeBook findEmployeeWithMinSalary(String firstname, String surname, Integer salary,
+                                                  @RequestParam("departmentID") Integer departmentID) {
+        return employeeInterface.findEmployeeWithMinSalary(firstname, surname, salary, departmentID);
     }
-    @GetMapping("/remove")
-    public EmployeeBook removeEmployee(@RequestParam String firstname, @RequestParam String surname) {
-        return employeeInterface.remove(firstname, surname);
+    @GetMapping("/min-salary")
+    public EmployeeBook findEmployeeWithMaxSalary(@RequestParam("departmentID") Integer departmentID) {
+        return employeeInterface.findEmployeeWithMaxSalary(departmentID);
     }
-    @GetMapping("/find")
-    public EmployeeBook findEmployee(@RequestParam String firstname, @RequestParam String surname) {
-        return employeeInterface.find(firstname, surname);
+    @GetMapping(value = "/all", params = "departmentID")
+    public EmployeeBook findAllEmployeesByDepartment (@RequestParam("departmentID") Integer departmentID) {
+        return employeeInterface.findAllEmployeesByDepartment (departmentID);
     }
-    @GetMapping("/findAll")
-    public Collection<EmployeeBook> findAll() {
+    @GetMapping("/all")
+    public Map<Integer, List<EmployeeBook>> findAll() {
         return employeeInterface.findAll();
     }
 }
