@@ -23,7 +23,7 @@ public class EmployeeServiceImpl implements EmployeeService  {
         public EmployeeBook add(String firstname, String surname, Integer salary, Integer departmentID) {
             EmployeeBook employeeBook = new EmployeeBook(firstname, surname, salary, departmentID);
             if (employeeBooks.containsKey(employeeBook.getFullName())) {
-                throw new EmployeeAlreadyAddedException();
+                throw new EmployeeAlreadyAddedException("EmployeeIsAlreadyExisted");
             }
             employeeBooks.put(employeeBook.getFullName(), employeeBook);
             return employeeBook;
@@ -35,7 +35,7 @@ public class EmployeeServiceImpl implements EmployeeService  {
             if (employeeBooks.containsKey(employeeBook.getFullName())) {
                 return employeeBooks.remove(employeeBook.getFullName());
             }
-            throw new EmployeeNotFoundException();
+            throw new EmployeeNotFoundException("EmployeeIsNotFound");
         }
 
         @Override
@@ -44,7 +44,7 @@ public class EmployeeServiceImpl implements EmployeeService  {
             if (employeeBooks.containsKey(employeeBook.getFullName())) {
                 return employeeBooks.get(employeeBook.getFullName());
             }
-            throw new EmployeeNotFoundException();
+            throw new EmployeeNotFoundException("EmployeeIsNotFound");
         }
 
         @Override
