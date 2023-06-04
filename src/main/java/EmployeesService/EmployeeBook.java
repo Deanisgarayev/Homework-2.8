@@ -1,6 +1,5 @@
-package com.skypro.homework28;
+package EmployeesService;
 
-import java.util.Collection;
 import java.util.Objects;
 
 public class EmployeeBook {
@@ -57,11 +56,11 @@ public class EmployeeBook {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         EmployeeBook that = (EmployeeBook) o;
-        return salary == that.salary && departmentID == that.departmentID && Objects.equals(firstname, that.firstname) && Objects.equals(surname, that.surname);
+        return Objects.equals(salary, that.salary) && Objects.equals(departmentID, that.departmentID) && Objects.equals(firstname, that.firstname) && Objects.equals(surname, that.surname);
     }
 
     @Override
-    public Integer hashCode() {
+    public int hashCode() {
         return Objects.hash(firstname, surname, salary, departmentID);
     }
 
