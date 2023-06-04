@@ -23,7 +23,7 @@ public class EmployeeServiceImpl implements EmployeeService  {
         public EmployeeBook add(String firstname, String surname, Integer salary, Integer departmentID) {
             EmployeeBook employeeBook = new EmployeeBook(firstname, surname, salary, departmentID);
             if (employeeBooks.containsKey(employeeBook.getFullName())) {
-                throw new EmployeeAlreadyAddedException("EmployeeIsAlreadyExisted");
+                throw new EmployeeAlreadyAddedException("EmployeeAlreadyExists");
             }
             employeeBooks.put(employeeBook.getFullName(), employeeBook);
             return employeeBook;
