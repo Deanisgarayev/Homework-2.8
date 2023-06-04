@@ -1,6 +1,7 @@
 package EmployeesService;
 
 import EmployeesService.EmployeeService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -12,8 +13,9 @@ import java.util.Collection;
 @RequestMapping("/employeeService")
 public class EmployeeServiceController {
 
-        private final EmployeeService employeeService;
 
+        private final EmployeeService employeeService;
+@Autowired
         public EmployeeServiceController(EmployeeService employeeService) {
             this.employeeService= employeeService;
         }
