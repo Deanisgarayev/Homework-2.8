@@ -29,7 +29,7 @@ public class EmployeeBook {
         return salary;
     }
 
-    public Integer getDepartment() {
+    public Integer getDepartmentID() {
         return departmentID;
     }
 
@@ -37,7 +37,7 @@ public class EmployeeBook {
         return firstname + " " + surname;
     }
 
-    public void setDepartment(Integer departmentID) {
+    public void setDepartmentID(Integer departmentID) {
         this.departmentID = departmentID;
     }
 

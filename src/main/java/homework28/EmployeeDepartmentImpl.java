@@ -1,4 +1,4 @@
-package com.skypro.homework28;
+package homework28;
 
 import EmployeesService.EmployeeBook;
 import EmployeesService.EmployeeService;
@@ -8,10 +8,11 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 @Service
-public class EmployeeInterfaceImpl implements EmployeeInterface {
+public class EmployeeDepartmentImpl implements EmployeeDepartment {
     private final EmployeeService employeeService;
+    private Object departmentID;
 
-    public EmployeeInterfaceImpl(EmployeeService employeeService) {
+    public EmployeeDepartmentImpl(EmployeeService employeeService) {
         this.employeeService = employeeService;
     }
 
@@ -48,7 +49,7 @@ public class EmployeeInterfaceImpl implements EmployeeInterface {
     public  Map<Integer, List<EmployeeBook>> findAll() {
         return employeeService.findAll()
                 .stream()
-                .filter(employee -> Objects.equals(employee.getDepartmentID(),departmentID))
+                .filter(employee -> Objects.equals(employee.getDepartmentID(), departmentID))
                 .collect(Collectors.groupingBy(e->e.getDepartmentID()));
     }
 }

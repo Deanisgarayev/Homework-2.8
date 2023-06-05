@@ -1,4 +1,4 @@
-package com.skypro.homework28;
+package homework28;
 
 import EmployeesService.EmployeeBook;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,34 +7,35 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/employee")
+@RequestMapping("/employeeDepartment")
 
-public class EmployeeController {
-    private final EmployeeInterface employeeInterface;
+public class EmployeeDepartmentController {
+    private final EmployeeDepartment employeeDepartment;
 @Autowired
-    public EmployeeController(EmployeeInterface employeeInterface) {
-        this.employeeInterface = employeeInterface;
+    public EmployeeDepartmentController(EmployeeDepartment employeeDepartment) {
+        this.employeeDepartment = employeeDepartment;
     }
 
     @GetMapping("/min-salary")
     public EmployeeBook findEmployeeWithMinSalary(@RequestParam("departmentID") Integer departmentID) {
-        return employeeInterface.findEmployeeWithMinSalary( departmentID);
+        return employeeDepartment.findEmployeeWithMinSalary( departmentID);
     }
     @GetMapping("/max-salary")
     public EmployeeBook findEmployeeWithMaxSalary(@RequestParam("departmentID") Integer departmentID) {
-        return employeeInterface.findEmployeeWithMaxSalary(departmentID);
+        return employeeDepartment.findEmployeeWithMaxSalary(departmentID);
     }
     @GetMapping(value = "/all", params = "departmentID")
-    public EmployeeBook findAllEmployeesByDepartment (@RequestParam("departmentID") Integer departmentID) {
-        return employeeInterface.findAllEmployeesByDepartment (departmentID);
+    public Collection <EmployeeBook> findAllEmployeesByDepartment (@RequestParam("departmentID") Integer departmentID) {
+        return employeeDepartment.findAllEmployeesByDepartment (departmentID);
     }
     @GetMapping("/all")
     public Map<Integer, List<EmployeeBook>> findAll() {
-        return employeeInterface.findAll();
+        return employeeDepartment.findAll();
     }
 }
 

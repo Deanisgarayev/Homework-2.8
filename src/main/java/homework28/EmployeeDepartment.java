@@ -1,4 +1,4 @@
-package com.skypro.homework28;
+package homework28;
 
 import EmployeesService.EmployeeBook;
 
@@ -6,7 +6,7 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 
-public interface EmployeeInterface {
+public interface EmployeeDepartment {
 
         EmployeeBook findEmployeeWithMinSalary (Integer departmentID);
 
