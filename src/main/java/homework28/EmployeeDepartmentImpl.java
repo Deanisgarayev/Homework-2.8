@@ -1,6 +1,6 @@
 package homework28;
 
-import EmployeesService.EmployeeBook;
+import com.skypro.EmployeeBook;
 import EmployeesService.EmployeeService;
 import org.springframework.stereotype.Service;
 
@@ -50,7 +50,7 @@ public class EmployeeDepartmentImpl implements EmployeeDepartment {
         return employeeService.findAll()
                 .stream()
                 .filter(employee -> Objects.equals(employee.getDepartmentID(), departmentID))
-                .collect(Collectors.groupingBy(e->e.getDepartmentID()));
+                .collect(Collectors.groupingBy(EmployeeBook::getDepartmentID));
     }
 }
 

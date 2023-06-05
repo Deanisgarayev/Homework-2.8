@@ -1,5 +1,7 @@
 package EmployeesService;
 
+import com.skypro.EmployeeBook;
+
 import java.util.Collection;
 
 public interface EmployeeService {

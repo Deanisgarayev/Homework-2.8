@@ -1,7 +1,8 @@
 package EmployeesService;
 
-import EmployeesService.EmployeeAlreadyAddedException;
-import EmployeesService.EmployeeNotFoundException;
+import Exceptions.EmployeeAlreadyAddedException;
+import Exceptions.EmployeeNotFoundException;
+import com.skypro.EmployeeBook;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;

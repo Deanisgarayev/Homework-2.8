@@ -1,6 +1,6 @@
 package homework28;
 
-import EmployeesService.EmployeeBook;
+import com.skypro.EmployeeBook;
 
 import java.util.Collection;
 import java.util.List;

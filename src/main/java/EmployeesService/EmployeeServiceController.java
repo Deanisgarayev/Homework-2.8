@@ -1,6 +1,6 @@
 package EmployeesService;
 
-import EmployeesService.EmployeeService;
+import com.skypro.EmployeeBook;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,7 +22,7 @@ public class EmployeeServiceController {
 
         @GetMapping("/add")
         public EmployeeBook addEmployee(@RequestParam String firstname, @RequestParam String surname,
-        @RequestParam Integer salary, @RequestParam Integer departmentID) {
+                                        @RequestParam Integer salary, @RequestParam Integer departmentID) {
             return employeeService.add(firstname, surname, salary, departmentID);
         }
         @GetMapping("/remove")
