@@ -22,7 +22,7 @@ public class EmployeeDepartmentController {
     }
 
     @GetMapping("/min-salary")
-    public EmployeeBook findEmployeeWithMinSalary(@RequestParam("departmentID") Integer departmentID) {
+    public EmployeeBook findEmployeeWithMinSalary( @RequestParam("departmentID") Integer departmentID) {
         return employeeDepartment.findEmployeeWithMinSalary( departmentID);
     }
     @GetMapping("/max-salary")

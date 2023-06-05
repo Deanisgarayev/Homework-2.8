@@ -11,7 +11,9 @@ public interface EmployeeDepartment {
         EmployeeBook findEmployeeWithMinSalary (Integer departmentID);
 
         EmployeeBook findEmployeeWithMaxSalary (Integer departmentID);
-        Collection<EmployeeBook>  findAllEmployeesByDepartment ( Integer departmentID);
+
+
+        Collection<EmployeeBook>  findAllEmployeesByDepartment (Integer departmentID);
 
         Map<Integer, List<EmployeeBook>> findAll();
 

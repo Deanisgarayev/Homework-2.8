@@ -1,7 +1,7 @@
 package homework28;
 
-import com.skypro.EmployeeBook;
 import EmployeesService.EmployeeService;
+import com.skypro.EmployeeBook;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
@@ -10,7 +10,6 @@ import java.util.stream.Collectors;
 @Service
 public class EmployeeDepartmentImpl implements EmployeeDepartment {
     private final EmployeeService employeeService;
-    private Object departmentID;
 
     public EmployeeDepartmentImpl(EmployeeService employeeService) {
         this.employeeService = employeeService;
@@ -49,7 +48,6 @@ public class EmployeeDepartmentImpl implements EmployeeDepartment {
     public  Map<Integer, List<EmployeeBook>> findAll() {
         return employeeService.findAll()
                 .stream()
-                .filter(employee -> Objects.equals(employee.getDepartmentID(), departmentID))
                 .collect(Collectors.groupingBy(EmployeeBook::getDepartmentID));
     }
 }
