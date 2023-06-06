@@ -1,3 +1,210 @@
+GET http://localhost:8080/employeeDepartment/all?departmentID=1
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-06T183606.200.json
+
+###
+
+GET http://localhost:8080/employeeDepartment/all?departmentID=2
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-06T183552.200.json
+
+###
+
+GET http://localhost:8080/employeeDepartment/all
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-06T183302.200.json
+
+###
+
+GET http://localhost:8080/employeeDepartment/min-salary?departmentID=2
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-06T183256.200.json
+
+###
+
+GET http://localhost:8080/employeeDepartment/min-salary?departmentID=2
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-06T183254.200.json
+
+###
+
+GET http://localhost:8080/employeeDepartment/min-salary?departmentID=1
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-06T183248.200.json
+
+###
+
+GET http://localhost:8080/employeeDepartment/all?departmentID=2
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-06T183240.200.json
+
+###
+
+GET http://localhost:8080/employeeDepartment/all?departmentID=1
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-06T183228.200.json
+
+###
+
+GET http://localhost:8080/employeeDepartment/min-salary?departmentID=2
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-06T183207.200.json
+
+###
+
+GET http://localhost:8080/employeeService/findAll
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-06T183158.200.json
+
+###
+
+GET http://localhost:8080/employeeService/add?firstname=hello&surname=hey&salary=94000&departmentID=2
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-06T183155.200.json
+
+###
+
+GET http://localhost:8080/employeeService/add?firstname=yeap&surname=aya&salary=910000&departmentID=1
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-06T183152.200.json
+
+###
+
+GET http://localhost:8080/employeeService/add?firstname=hi&surname=hiya&salary=95000&departmentID=1
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-06T183150.200.json
+
+###
+
+GET http://localhost:8080/employeeService/add?firstname=yes&surname=yeah&salary=90000&departmentID=2
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-06T183144.200.json
+
+###
+
+GET http://localhost:8080/employeeDepartment/max-salary?departmentID=2
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-06T183135.500.json
+
+###
+
+GET http://localhost:8080/employeeDepartment/all?departmentID=1
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-06T183134.200.json
+
+###
+
+GET http://localhost:8080/employeeDepartment/all
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-06T183131.200.json
+
+###
+
+GET http://localhost:8080/employeeDepartment/all?departmentID=1
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-06T182944.404.json
+
+###
+
+GET http://localhost:8080/employeeService/findAll
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-06T182939.404.json
+
+###
+
+GET http://localhost:8080/employeeService/add?firstname=hello&surname=hey&salary=94000&departmentID=2
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-06T182934.404.json
+
+###
+
+GET http://localhost:8080/employeeService/add?firstname=yeap&surname=aya&salary=910000&departmentID=1
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-06T182930.404.json
+
+###
+
+GET http://localhost:8080/employeeService/add?firstname=yes&surname=yeah&salary=90000&departmentID=2
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-06T182926.404.json
+
+###
+
+GET http://localhost:8080/employeeService/add?firstname=hi&surname=hiya&salary=95000&departmentID=1
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-06T182923.404.json
+
+###
+
 GET http://localhost:8080/employeeService/findAll
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
@@ -238,213 +445,6 @@ User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
 <> 2023-06-05T214324.400.json
-
-###
-
-GET http://localhost:8080/employeeService/add?firstname=yes&surname=yeah&salary=90000&departmentID=2
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-06-05T214321.400.json
-
-###
-
-GET http://localhost:8080/employeeDepartment/max-salary?departmentID=2
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-06-05T214236.404.json
-
-###
-
-GET http://localhost:8080/employeeDepartment/max-salary?departmentID=2
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-06-05T214021.404.json
-
-###
-
-GET http://localhost:8080/employeeService/add?firstname=yes&surname=yeah&salary=90000&departmentID=2
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-06-05T214015.400.json
-
-###
-
-GET http://localhost:8080/employeeService/add?firstname=yes&surname=yeah&salary=90000&departmentID=2
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-06-05T214014.400.json
-
-###
-
-GET http://localhost:8080/employeeDepartment/max-salary?departmentID=2
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-06-05T214006.404.json
-
-###
-
-GET http://localhost:8050/employeeDepartment/max-salary?departmentID=1
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-06-05T213735.404.json
-
-###
-
-GET http://localhost:8050/employeeDepartment/max-salary?departmentID=1
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-06-05T213427.404.json
-
-###
-
-GET http://localhost:8050/employeeDepartment/all?departmentID=1
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-06-05T213421.404.json
-
-###
-
-GET http://localhost:8050/employeeDepartment/all
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-06-05T213418.404.json
-
-###
-
-GET http://localhost:8050/employeeDepartment/min-salary?departmentID=2
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-06-05T213414.404.json
-
-###
-
-GET http://localhost:8050/employeeDepartment/all?departmentID=1
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-06-05T213342.404.json
-
-###
-
-GET http://localhost:8050/employeeService/findAll
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-06-05T213330.200.json
-
-###
-
-GET http://localhost:8050/employeeService/findAll
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-06-05T213328.200.json
-
-###
-
-GET http://localhost:8050/employeeService/add?firstname=hello&surname=hey&salary=94000&departmentID=2
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-06-05T213324.200.json
-
-###
-
-GET http://localhost:8050/employeeService/add?firstname=yes&surname=yeah&salary=90000&departmentID=2
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-06-05T213318.400.json
-
-###
-
-GET http://localhost:8050/employeeService/add?firstname=yeap&surname=aya&salary=910000&departmentID=1
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-06-05T213312.400.json
-
-###
-
-GET http://localhost:8050/employeeService/add?firstname=yeap&surname=aya&salary=910000&departmentID=1
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-06-05T213310.200.json
-
-###
-
-GET http://localhost:8050/employeeService/add?firstname=yes&surname=yeah&salary=90000&departmentID=2
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-06-05T213303.200.json
-
-###
-
-GET http://localhost:8050/employeeService/add?firstname=hi&surname=hiya&salary=95000&departmentID=1
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-06-05T213259.200.json
-
-###
-
-GET http://localhost:8060/employeeService/find?firstname=hi&surname=hiya&salary=95000&departmentID=1
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-06-05T212629.200.json
-
-###
-
-GET http://localhost:8060/employeeDepartment/min-salary?departmentID=2
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-06-05T212422.404.json
-
-###
-
-GET http://localhost:8060/employeeDepartment/all
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-06-05T212334.404.json
 
 ###
 

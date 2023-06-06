@@ -1,4 +1,4 @@
-package com.skypro;
+package Application.com.skypro;
 
 import java.util.Objects;
 

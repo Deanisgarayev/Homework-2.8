@@ -1,7 +1,7 @@
-package homework28;
+package Application.com.homework28;
 
-import EmployeesService.EmployeeService;
-import com.skypro.EmployeeBook;
+import Application.com.EmployeesService.EmployeeService;
+import Application.com.skypro.EmployeeBook;
 import org.springframework.stereotype.Service;
 
 import java.util.*;

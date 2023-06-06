@@ -1,6 +1,6 @@
-package homework28;
+package Application.com.homework28;
 
-import com.skypro.EmployeeBook;
+import Application.com.skypro.EmployeeBook;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,7 +22,7 @@ public class EmployeeDepartmentController {
     }
 
     @GetMapping("/min-salary")
-    public EmployeeBook findEmployeeWithMinSalary( @RequestParam("departmentID") Integer departmentID) {
+    public EmployeeBook findEmployeeWithMinSalary(@RequestParam("departmentID") Integer departmentID) {
         return employeeDepartment.findEmployeeWithMinSalary( departmentID);
     }
     @GetMapping("/max-salary")

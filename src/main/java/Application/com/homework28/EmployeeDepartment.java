@@ -1,6 +1,6 @@
-package homework28;
+package Application.com.homework28;
 
-import com.skypro.EmployeeBook;
+import Application.com.skypro.EmployeeBook;
 
 import java.util.Collection;
 import java.util.List;

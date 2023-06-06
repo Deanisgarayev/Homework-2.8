@@ -1,6 +1,6 @@
-package EmployeesService;
+package Application.com.EmployeesService;
 
-import com.skypro.EmployeeBook;
+import Application.com.skypro.EmployeeBook;
 
 import java.util.Collection;
 
