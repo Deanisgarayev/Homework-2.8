@@ -1,6 +1,10 @@
 package Application.com.skypro;
 
+import org.apache.commons.lang3.StringUtils;
+
 import java.util.Objects;
+
+import static org.apache.commons.lang3.StringUtils.*;
 
 public class EmployeeBook {
 
@@ -11,8 +15,8 @@ public class EmployeeBook {
     private Integer departmentID;
 
     public EmployeeBook(String firstname, String surname, Integer salary, Integer departmentID) {
-        this.firstname = firstname;
-        this.surname = surname;
+        this.firstname = capitalize(firstname.toLowerCase());
+        this.surname = capitalize(surname.toLowerCase());
         this.salary = salary;
         this.departmentID = departmentID;
     }
