@@ -26,7 +26,7 @@ public class EmployeeServiceImpl implements EmployeeService {
         @Override
 
         public EmployeeBook add(String firstname, String surname, Integer salary, Integer departmentID) {
-            validateInput(firstname, surname);
+            validate(firstname, surname);
             EmployeeBook employeeBook = new EmployeeBook(firstname, surname, salary, departmentID);
             if (employeeBooks.containsKey(employeeBook.getFullName())) {
                 throw new EmployeeAlreadyAddedException("EmployeeAlreadyExists");
@@ -37,7 +37,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 
         @Override
         public EmployeeBook remove(String firstname, String surname, Integer salary, Integer departmentID) {
-            validateInput(firstname, surname);
+            validate(firstname, surname);
             EmployeeBook employeeBook = new EmployeeBook(firstname, surname, salary, departmentID);
             if (employeeBooks.containsKey(employeeBook.getFullName())) {
                 return employeeBooks.remove(employeeBook.getFullName());
@@ -47,7 +47,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 
         @Override
         public EmployeeBook find(String firstname, String surname, Integer salary, Integer departmentID) {
-            validateInput(firstname, surname);
+            validate(firstname, surname);
             EmployeeBook employeeBook = new EmployeeBook(firstname, surname, salary, departmentID);
             if (employeeBooks.containsKey(employeeBook.getFullName())) {
                 return employeeBooks.get(employeeBook.getFullName());
@@ -60,7 +60,15 @@ public class EmployeeServiceImpl implements EmployeeService {
             return Collections.unmodifiableCollection(employeeBooks.values());
         }
 
-    private void validateInput(String firstname, String surname) {
+    private void validate(String firstname, String surname) {
+//          public validate (String... names)
+//          for(String name:names){
+//          if(!StringUtils.isAlpha(name)){
+// throw new InvalidInputException("wrong spelling, you can write only by alphabet");
+//          / public method(Employee employee){
+//          validate(employee.getFirstname,employee.getSurname)
+//          employee.setFirstname(StringUtils.capitalize(employee.getFirstname.toLowerCase());)
+//          employee.setFirstname(StringUtils.capitalize(employee.getFirstname.toLowerCase());)/
         if (!(isAlpha(firstname) && isAlpha(surname))) {
             throw new InvalidInputException("wrong spelling, you can write only by alphabet");
         }
