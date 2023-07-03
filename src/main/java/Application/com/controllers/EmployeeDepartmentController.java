@@ -1,5 +1,6 @@
-package Application.com.homework28;
+package Application.com.controllers;
 
+import Application.com.interfaces.EmployeeDepartment;
 import Application.com.skypro.EmployeeBook;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

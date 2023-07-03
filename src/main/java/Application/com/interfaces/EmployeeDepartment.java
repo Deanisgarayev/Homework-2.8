@@ -1,4 +1,4 @@
-package Application.com.homework28;
+package Application.com.interfaces;
 
 import Application.com.skypro.EmployeeBook;
 
