@@ -44,21 +44,25 @@ public class EmployeeDepartmentImplTest {
     }
 
     @Test
-    public void ShouldReturnEmployeeWithMaxSalaryFromFirstDepartment() {
+    public void ShouldReturnEmployeeWithMaxSalaryFromFirstDepartmentAndThrowExceptionByThirdDepartment() {
         EmployeeBook employee = out.findEmployeeWithMaxSalary( 1);
         assertEquals("Roy", employee.getFirstname());
         assertEquals("Gaines", employee.getSurname());
         assertEquals(7000, employee.getSalary());
         assertEquals(1, employee.getDepartmentID());
+        assertThrows(IllegalArgumentException.class,
+                ()->out.findEmployeeWithMaxSalary(3));
     }
 
     @Test
-    public void ShouldReturnEmployeeWithMinSalaryFromSecondDepartment() {
+    public void ShouldReturnEmployeeWithMinSalaryFromSecondDepartmentAndThrowExceptionByThirdDepartment() {
         EmployeeBook employee = out.findEmployeeWithMinSalary(2);
         assertEquals("Ruby", employee.getFirstname());
         assertEquals("Parker", employee.getSurname());
         assertEquals(5000, employee.getSalary());
         assertEquals(2, employee.getDepartmentID());
+        assertThrows(IllegalArgumentException.class,
+                ()->out.findEmployeeWithMinSalary(3));
 
     }
     @Test
