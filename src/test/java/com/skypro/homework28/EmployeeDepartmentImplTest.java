@@ -44,6 +44,12 @@ public class EmployeeDepartmentImplTest {
     }
 
     @Test
+    public void should() {
+        int employee = out.findTotalSumByDepartment(1);
+        assertEquals(13666, employee);
+    }
+
+    @Test
     public void ShouldReturnEmployeeWithMaxSalaryFromFirstDepartmentAndThrowExceptionByThirdDepartment() {
         EmployeeBook employee = out.findEmployeeWithMaxSalary( 1);
         assertEquals("Roy", employee.getFirstname());

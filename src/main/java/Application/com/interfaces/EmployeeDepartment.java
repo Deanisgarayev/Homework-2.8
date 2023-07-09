@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Map;
 
 public interface EmployeeDepartment {
-        EmployeeBook findTotalSumByDepartment(Integer departmentID);
+        int findTotalSumByDepartment(Integer departmentID);
 
         EmployeeBook findEmployeeWithMinSalary (Integer departmentID);
 

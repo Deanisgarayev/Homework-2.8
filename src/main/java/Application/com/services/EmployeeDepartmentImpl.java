@@ -17,13 +17,13 @@ public class EmployeeDepartmentImpl implements EmployeeDepartment {
     }
 
     @Override
-    public EmployeeBook findTotalSumByDepartment(Integer departmentID) {
+    public int findTotalSumByDepartment(Integer departmentID) {
         return employeeService.findAll()
                 .stream()
                 .filter(employee -> Objects.equals(employee.getDepartmentID(), departmentID))
-                .mapToInt(employee->employee.getSalary())
-                .sum()
-                .orElseThrow(() -> new IllegalArgumentException("there's not employee in the department"));
+                .mapToInt(employee -> employee.getSalary())
+                .sum();
+
 
 
 
