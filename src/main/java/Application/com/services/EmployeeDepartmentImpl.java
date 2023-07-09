@@ -16,6 +16,20 @@ public class EmployeeDepartmentImpl implements EmployeeDepartment {
         this.employeeService = employeeService;
     }
 
+    @Override
+    public EmployeeBook findTotalSumByDepartment(Integer departmentID) {
+        return employeeService.findAll()
+                .stream()
+                .filter(employee -> Objects.equals(employee.getDepartmentID(), departmentID))
+                .mapToInt(employee->employee.getSalary())
+                .sum()
+                .orElseThrow(() -> new IllegalArgumentException("there's not employee in the department"));
+
+
+
+//                .orElseThrow(() -> new IllegalArgumentException("there's not employee in the department"));
+    }
+
 
     @Override
     public EmployeeBook findEmployeeWithMaxSalary(Integer departmentID) {
