@@ -21,7 +21,7 @@ public class EmployeeDepartmentController {
     public EmployeeDepartmentController(EmployeeDepartment employeeDepartment) {
         this.employeeDepartment = employeeDepartment;
     }
-    @GetMapping("sum")
+    @GetMapping("/sum")
     public int findTotalSumByDepartment(@RequestParam("departmentID")Integer departmentID) {
         return employeeDepartment.findTotalSumByDepartment(departmentID);
     }
